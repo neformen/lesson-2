@@ -1,0 +1,41 @@
+<div class="panel panel-default" [hidden]="hideForm">
+    <div class="panel-heading">
+        <h4 class="pannel-title">
+            <span class="glyphicon glyphicon-plus-sign"></span> Add New Student
+        </h4>
+    </div>
+    <div class="panel-body">
+        <div>
+          <div class="form-group">
+            <label for="id">Id</label>
+            <input type="text"
+                class="form-control" id="id"
+                placeholder="Id"
+                #id>
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text"
+                class="form-control" id="name"
+                placeholder="Name"
+                #name>
+          </div>
+          <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text"
+                class="form-control" id="surname"
+                placeholder="Surname"
+                #surname>
+          </div>
+          <div class="form-group">
+            <label for="mark">Avarage mark</label>
+            <input type="text"
+                class="form-control" id="mark"
+                placeholder="Avarage mark"
+                #mark>
+          </div>
+          <button type="submit" class="btn btn-primary"
+                  (click)='addStudent(id.value, name.value, surname.value, mark.value)'>Add student</button>
+        </div>
+    </div>
+</div>

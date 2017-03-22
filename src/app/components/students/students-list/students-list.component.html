@@ -1,0 +1,7 @@
+<ul>
+  <app-student *ngFor="let student of studentList" [student]="student" (delete)=deleteStudent($event)></app-student>
+</ul>
+
+<app-student-form [hideForm]="hideForm" (add)="addStudentToList($event)"></app-student-form>
+
+<button class="btn btn-primary" (click)="hideForm=!hideForm" >Toggle form </button>

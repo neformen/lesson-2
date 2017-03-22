@@ -1,0 +1,17 @@
+<div class="panel panel-default" [ngClass]="{'good-mark': student.avarageMark > 4, 'stund-comp': true}">
+    <div class="panel-heading">Student</div>
+    <div class="panel-body">
+        <ul>
+            <li>Id: {{student.id}}</li>
+            <li>Name: {{student.name}}</li>
+            <li>Surname: {{student.surname}}</li>
+            <li>Avarage mark: {{student.avarageMark}}</li>
+        </ul>
+        <button class="btn btn-danger" (click)="deleteStudent($event)" >Delete</button>
+        <button class="btn btn-warning" (click)="hidePanel=!hidePanel" >Edit mark</button>
+        <div class="" [hidden]="hidePanel">
+          <input  type="" [(ngModel)]="newMark">
+          <button class="btn btn-primary" (click)="saveMark()" >Edit mark</button>
+        </div>
+    </div>
+</div>

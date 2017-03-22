@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { StudentsModule } from './components/students/students.module';
+import { TitleModule } from './components/title/title.module';
+
 import { AppComponent } from './app.component';
+
+import { StudentArrayService } from './services';
 
 @NgModule({
   declarations: [
@@ -12,9 +17,13 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    StudentsModule,
+    TitleModule
   ],
-  providers: [],
+  providers: [
+    StudentArrayService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
